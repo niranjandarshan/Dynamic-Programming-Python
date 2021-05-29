@@ -1,0 +1,25 @@
+def maxlongest(arr):
+    l=[1 for i in range(len(arr))]
+    for i in range(len(arr)):
+        for j in range(i):
+            if(arr[i]>arr[j] and l[i]<=l[j]):
+                l[i]=1+l[j]
+            
+    n=max(l)
+    print("n",n)
+    print("l",l)
+    p=list()
+    while(n!=0):
+        p.append(n)
+        n=n-1
+    for i in range(len(p)):
+        print(arr[i],end=" ",sep="")
+        
+
+arr=[5,6,7,8,9]
+maxlongest(arr)
+
+        
+                
+    
+    
